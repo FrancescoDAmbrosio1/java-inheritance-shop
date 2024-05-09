@@ -11,4 +11,16 @@ public class Cuffie extends Prodotto{
 		this.colore = colore;
 		this.wireless = wireless;
 	}
+	
+	public String isSmart() {
+		if(this.wireless == true) {
+			return " sono Wireless.";
+		} else {
+			return " sono cablate.";
+		}
+	}
+	public String getInfoCuffie() {
+		return  "Le Cuffie " + marca + " " + nome + " di colore " + this.colore + 
+				isSmart() + " - Codice prodotto: " + this.codiceLeftPad();
+	}
 }

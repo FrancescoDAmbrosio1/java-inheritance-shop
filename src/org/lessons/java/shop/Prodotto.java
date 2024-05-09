@@ -39,7 +39,6 @@ public class Prodotto {
 		} else {
 			codiceEsteso = codiceStringato; 
 		}
-		System.out.println("Il codice è: " + codiceEsteso);
 		return codiceEsteso;
 	}
 }
