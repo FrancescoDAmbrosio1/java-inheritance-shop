@@ -20,8 +20,9 @@ public class Televisori extends Prodotto{
 		}
 	}
 	public String getInfoTv() {
-		return  "LA TV " + marca + " " + nome + " " + this.dimensione +
-				" pollici " + isSmart() + " - Codice prodotto: " + this.codiceLeftPad();
+		return  super.toString() + "Inoltre, la TV selezionata ha uno schermo di " 
+				+ this.dimensione +	" pollici e " + isSmart() + " - Codice prodotto: " 
+				+ this.codiceLeftPad();
 	}
 
 }

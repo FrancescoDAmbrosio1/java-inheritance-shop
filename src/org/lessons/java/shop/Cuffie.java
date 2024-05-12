@@ -12,7 +12,7 @@ public class Cuffie extends Prodotto{
 		this.wireless = wireless;
 	}
 	
-	public String isSmart() {
+	public String isWireless() {
 		if(this.wireless == true) {
 			return " sono Wireless.";
 		} else {
@@ -20,7 +20,8 @@ public class Cuffie extends Prodotto{
 		}
 	}
 	public String getInfoCuffie() {
-		return  "Le Cuffie " + marca + " " + nome + " di colore " + this.colore + 
-				isSmart() + " - Codice prodotto: " + this.codiceLeftPad();
+		return  super.toString() + "Inoltre, le Cuffie selezionate di colore " 
+				+ this.colore + isWireless() + " - Codice prodotto: " 
+				+ this.codiceLeftPad();
 	}
 }

@@ -1,5 +1,6 @@
 package org.lessons.java.shop;
 
+
 public class Prodotto {
 	private static int codice;
 	public String nome;
@@ -22,11 +23,10 @@ public class Prodotto {
 	public void prezzoBase() {
 		System.out.println("Il prezzo base del prodotto " + nome + " è: " + prezzo + " €");
 	}
-	public double prezzoConIva() {
+	public String prezzoConIva() {
 		double prezzoIva =  prezzo + (prezzo * (iva/100));
-		System.out.println("Il prezzo con IVA al " + iva + "% del prodotto " + nome + 
-				" è: " + prezzoIva + " €");
-		return prezzoIva;
+		String prezzoRounded = String.format("%.02f", prezzoIva);
+		return prezzoRounded;
 	}
 	public void nomeEsteso() {
 		System.out.println("Il nome esteso del prodotto è: " + codice + "-" + nome);
@@ -41,4 +41,12 @@ public class Prodotto {
 		}
 		return codiceEsteso;
 	}
+
+	@Override
+	public String toString() {
+		return "\nIl prodotto selezionato " + marca + " " + nome + " " 
+				+ "ha un prezzo di " + prezzoConIva() + " € al quale è stata applicata l'iva al "
+				+ iva + " %. \n";
+	}
+	
 }

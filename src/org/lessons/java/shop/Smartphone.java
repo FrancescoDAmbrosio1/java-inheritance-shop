@@ -13,9 +13,10 @@ public class Smartphone extends Prodotto{
 		
 	}
 	
-	public String getInfoTelefono() {
-		return  "Lo smartphone " + marca + " " + nome + " ha IL seguente IMEI: " + this.imei +
-				" ed una memoria di " + memoria + " Giga. - " + this.codiceLeftPad();
+	public String toString() {
+		return  super.toString() +"Inoltre, lo smartphone selezionato ha IL seguente IMEI: "
+				+ this.imei + " ed una memoria di " + memoria + 
+				" Giga. -  Codice prodotto: " + this.codiceLeftPad();
 	}
 	
 }
