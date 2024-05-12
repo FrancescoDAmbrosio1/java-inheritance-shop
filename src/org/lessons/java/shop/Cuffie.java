@@ -19,7 +19,7 @@ public class Cuffie extends Prodotto{
 			return " sono cablate.";
 		}
 	}
-	public String getInfoCuffie() {
+	public String toString() {
 		return  super.toString() + "Inoltre, le Cuffie selezionate di colore " 
 				+ this.colore + isWireless() + " - Codice prodotto: " 
 				+ this.codiceLeftPad();

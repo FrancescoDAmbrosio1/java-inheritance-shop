@@ -19,7 +19,7 @@ public class Televisori extends Prodotto{
 			return "non è una smart TV";
 		}
 	}
-	public String getInfoTv() {
+	public String toString() {
 		return  super.toString() + "Inoltre, la TV selezionata ha uno schermo di " 
 				+ this.dimensione +	" pollici e " + isSmart() + " - Codice prodotto: " 
 				+ this.codiceLeftPad();
