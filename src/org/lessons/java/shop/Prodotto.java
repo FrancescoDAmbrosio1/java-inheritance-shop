@@ -31,7 +31,7 @@ public class Prodotto {
 	public void nomeEsteso() {
 		System.out.println("Il nome esteso del prodotto è: " + codice + "-" + nome);
 	}
-	public static String codiceLeftPad() {
+	public String codiceLeftPad() {
 		String codiceStringato = "" + codice;
 		String codiceEsteso;
 		if(codiceStringato.length() < 8) {
